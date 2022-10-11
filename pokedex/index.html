@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/pokestyle.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <script src="./assets/js/jquery-3.6.0.js"></script>
+    link
+    <script src="assets/js/turn.min.js"></script>
+</head>
+
+
+<body onload="onLoad()">
+    <div class="container">
+
+        <div class="container-pokedex">
+           
+            <div class="container-pokedex-fixed">
+                <div class="container-pokedex-1 border-topo-esquerda">
+                    <div class="container-pokedex-2 border-topo-esquerda">
+                        <div class="buttons-4">
+                            <div class="button-glass">
+                                <div class="reflect"></div>
+                            </div>
+                            <div class="button-red"></div>
+                            <div class="button-yellow"></div>
+                            <div class="button-green"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-pokedex-sides">
+                <div class="container-pokedex-leftside">
+
+                </div>
+                <div class="container-pokedex-rightside">
+                    
+                </div>
+            </div>
+            <div class="pokemon-place">
+                
+                <div class="pokemon-place-img">
+                    
+                </div>
+                
+                <div class="pokemon-place-input-name">
+                    <div><input type="text" name="nome" class="pokemon-name" placeholder="Insira o nome do pokemon"
+                            id="nome"></div>
+
+                    <div><button onclick="findPokemon()"><img src="images/pokeball.png"
+                                alt="Imagem pokebola pesquisar"></button></div>
+                </div>
+            </div>
+            
+        </div>
+        
+
+
+        <div class="container-2">
+            <div class="container-2-pokedex">
+
+                <div class="left-side"></div>
+                <div class="right-side">
+                    <div class="right-side-blank"></div>
+                </div>
+
+
+                <div class="all-pokemon">
+                    <div class="all-pokemon-table">
+                        <div class="all-pokemon-table-unique-1 border-2px-solid-black-width-height">
+                            <!-- 
+                                parte que vai no javascript
+                             -->
+                            <div>
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+                                    alt="" class="pokemon-table-unique-img">
+                            </div>
+                            <div class="pokemon-table-unique-name">
+                                $pokemonname
+                            </div>
+
+                        </div>
+                        <div class="all-pokemon-table-unique-2 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-3 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-4 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-5 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-6 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-7 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-8 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-9 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-10 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-11 border-2px-solid-black-width-height"></div>
+                        <div class="all-pokemon-table-unique-12 border-2px-solid-black-width-height"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick=hideLeftSide() class="button-all-pokemon"><img src="./images/right-arrow.png" alt=""></button>
+
+
+
+    <script src="assets/js/poke.js"></script>
+</body>
+
+</html>
