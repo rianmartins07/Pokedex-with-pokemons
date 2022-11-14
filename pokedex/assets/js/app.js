@@ -2,7 +2,11 @@
 
 const fetchPokemon = (namePokemon) => {
 
-  namePokemon = namePokemon.toLowerCase()
+  
+    namePokemon = namePokemon.toLowerCase()
+  
+
+  
 
   let nome;
   let tipo1, tipo2
@@ -31,16 +35,17 @@ const fetchPokemon = (namePokemon) => {
 
     objPoke.push(pokemon)
 
+  
     let lisPokemons
 
     lisPokemons = (`
 
-    <div class="card ${response.types[0].type.name}">
+    <div class="card ${response.types[0].type.name}" id="${response.name}">
     <div class="pokemon-name-2">
       <h2 class="card-title">${response.name}</h2>
       <h2 class="hp-pokemon">HP ${response.stats[0].base_stat}</h2>
     </div>
-    <img class="card-image" alt="${response.name}"
+    <img class="card-image" alt="${response.name}}""
       src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${response.id}.png">
 
 
@@ -84,8 +89,8 @@ const fetchPokemon = (namePokemon) => {
         </div>
         <div class="pokemon-ability-name">
           <div class="pokemon-ability-realy-name">
-            <p>${response.abilities[0].ability.name}</p>
-            <p>${response.abilities[1].ability.name}</p>
+            <p>${response.abilities[0] != undefined ? response.abilities[0].ability.name : ''}</p>
+            <p>${response.abilities[1] != undefined ? response.abilities[1].ability.name : ''}</p>
           </div>
 
           <img src="./images/livro-de-magia.png" alt="">
@@ -105,7 +110,7 @@ const fetchPokemon = (namePokemon) => {
     $("#nome").val('')
     setTimeout(function () {
       $("#nome").attr('placeholder', 'Insira o nome do pokemon')
-    }, 3000)
+    }, 1000)
   })
 }
 

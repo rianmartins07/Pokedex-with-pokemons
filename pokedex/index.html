@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <script src="./assets/js/jquery-3.6.0.js"></script>
-    link
-    <script src="assets/js/turn.min.js"></script>
+
 </head>
 
 
@@ -21,7 +20,7 @@
     <div class="container">
 
         <div class="container-pokedex">
-           
+
             <div class="container-pokedex-fixed">
                 <div class="container-pokedex-1 border-topo-esquerda">
                     <div class="container-pokedex-2 border-topo-esquerda">
@@ -41,15 +40,19 @@
 
                 </div>
                 <div class="container-pokedex-rightside">
-                    
+                    <div class="position">
+                        <button onclick="hideLeftSide('-evolutions');" class="button-evolution-2 up">
+                            <img src="./images/right-arrow.png" alt="" id="bt-evolve">
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="pokemon-place">
-                
+
                 <div class="pokemon-place-img">
-                    
+                    <img src="./images/giphy.gif" alt="" id="giphy-embed">
                 </div>
-                
+
                 <div class="pokemon-place-input-name">
                     <div><input type="text" name="nome" class="pokemon-name" placeholder="Insira o nome do pokemon"
                             id="nome"></div>
@@ -58,14 +61,13 @@
                                 alt="Imagem pokebola pesquisar"></button></div>
                 </div>
             </div>
-            
         </div>
-        
+        <div class="container-2-evolutions">
+        </div>
 
 
         <div class="container-2">
             <div class="container-2-pokedex">
-
                 <div class="left-side"></div>
                 <div class="right-side">
                     <div class="right-side-blank"></div>
@@ -74,19 +76,7 @@
 
                 <div class="all-pokemon">
                     <div class="all-pokemon-table">
-                        <div class="all-pokemon-table-unique-1 border-2px-solid-black-width-height">
-                            <!-- 
-                                parte que vai no javascript
-                             -->
-                            <div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
-                                    alt="" class="pokemon-table-unique-img">
-                            </div>
-                            <div class="pokemon-table-unique-name">
-                                $pokemonname
-                            </div>
-
-                        </div>
+                        <div class="all-pokemon-table-unique-1 border-2px-solid-black-width-height"></div>
                         <div class="all-pokemon-table-unique-2 border-2px-solid-black-width-height"></div>
                         <div class="all-pokemon-table-unique-3 border-2px-solid-black-width-height"></div>
                         <div class="all-pokemon-table-unique-4 border-2px-solid-black-width-height"></div>
@@ -98,16 +88,30 @@
                         <div class="all-pokemon-table-unique-10 border-2px-solid-black-width-height"></div>
                         <div class="all-pokemon-table-unique-11 border-2px-solid-black-width-height"></div>
                         <div class="all-pokemon-table-unique-12 border-2px-solid-black-width-height"></div>
+
+                    </div>
+                    <div class="button-arrows-1">
+                        <button class="prev" onclick=countClick(0)>
+                            <img src="images/left-arrow.png" alt="" class="arrows">
+                        </button>
+                        <button class="next" onclick=countClick(1)>
+                            <img src="./images/right-arrow.png" alt="" class="arrows">
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <button onclick=hideLeftSide() class="button-all-pokemon"><img src="./images/right-arrow.png" alt=""></button>
+
+
+    <button onclick=hideLeftSide() class="button-all-pokemon up"><img src="./images/right-arrow.png" alt=""
+            id="bt-poke"></button>
 
 
 
+    <script src="./assets/js/app.js"></script>
     <script src="assets/js/poke.js"></script>
+
 </body>
 
 </html>
